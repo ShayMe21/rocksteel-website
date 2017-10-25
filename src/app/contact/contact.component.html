@@ -30,10 +30,10 @@
                   <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail" placeholder="Email Address...">
                 </div>
               </div>
-              <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputEmail'].invalid && form.controls['inputEmail'].touched">
-                <div *ngIf="form.controls['inputEmail'].errors.required">Your email address is required.</div>
-                <div *ngIf="form.controls['inputEmail'].errors.pattern">Invalid email address.</div>
-              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputEmail'].invalid && form.controls['inputEmail'].touched">
+              <div *ngIf="form.controls['inputEmail'].errors.required">Your email address is required.</div>
+              <div *ngIf="form.controls['inputEmail'].errors.pattern">Invalid email address.</div>
             </div>
 
             <div class="form-group">
@@ -44,10 +44,11 @@
                   <input type="text" class="form-control" id="inputMobile" formControlName="inputMobile" placeholder="Mobile Number...">
                 </div>
               </div>
-              <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputMobile'].invalid && form.controls['inputMobile'].touched">
-                <div *ngIf="form.controls['inputMobile'].errors.required">Your number is required.</div>
-                <div *ngIf="form.controls['inputMobile'].errors.pattern">Invalid phone number.</div>
-              </div>
+
+            </div>
+            <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputMobile'].invalid && form.controls['inputMobile'].touched">
+              <div *ngIf="form.controls['inputMobile'].errors.required">Your number is required.</div>
+              <div *ngIf="form.controls['inputMobile'].errors.pattern">Invalid phone number.</div>
             </div>
           </div>
 
