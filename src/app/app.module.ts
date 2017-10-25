@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component'; 
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent,
     MenuComponent,
     PortfolioComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
