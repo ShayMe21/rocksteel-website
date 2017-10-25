@@ -1,0 +1,84 @@
+<section id="contact-form">
+  <div class="container">
+    <div class="row" align="center">
+      <div class="col-sm-12">
+        <form novalidate [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="well form-horizontal">
+          <legend>Contact Us!</legend>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="inputName">Name</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" id="inputName" formControlName="inputName" placeholder="Name..." (change)="log(form.controls['inputName'])">
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputName'].invalid && form.controls['inputName'].touched">
+              <div *ngIf="form.controls['inputName'].errors.required">Your name is required.</div>
+              <div *ngIf="form.controls['inputName'].errors.minlength">Name must be greater than {{ form.controls.inputName.errors.minlength.requiredLength }} characters.</div>
+              <div *ngIf="form.controls['inputName'].errors.maxlength">Name cannot be greater than {{ form.controls.inputName.errors.maxlength.requiredLength }} characters.</div>
+              <div *ngIf="form.controls['inputName'].errors.pattern">This is not a valid name.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="inputEmail">Email Address</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail" placeholder="Email Address...">
+                </div>
+              </div>
+              <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputEmail'].invalid && form.controls['inputEmail'].touched">
+                <div *ngIf="form.controls['inputEmail'].errors.required">Your email address is required.</div>
+                <div *ngIf="form.controls['inputEmail'].errors.pattern">Invalid email address.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="inputMobile">Mobile</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                  <input type="text" class="form-control" id="inputMobile" formControlName="inputMobile" placeholder="Mobile Number...">
+                </div>
+              </div>
+              <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputMobile'].invalid && form.controls['inputMobile'].touched">
+                <div *ngIf="form.controls['inputMobile'].errors.required">Your number is required.</div>
+                <div *ngIf="form.controls['inputMobile'].errors.pattern">Invalid phone number.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="inputMessage">Message</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <textarea class="form-control" id="inputMessage" formControlName="inputMessage" rows="8" placeholder="Your Message goes here..."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-danger" role="alert" id="formWarningMessage" *ngIf="form.controls['inputMessage'].invalid && form.controls['inputMessage'].touched">
+              <div *ngIf="form.controls['inputMessage'].errors.required">Message cannot be empty.</div>
+              <div *ngIf="form.controls['inputMessage'].errors.minlength">Message must be greater than {{ form.controls.inputMessage.errors.minlength.requiredLength }} characters.</div>
+              <div *ngIf="form.controls['inputMessage'].errors.maxlength">Message cannot be greater than {{ form.controls.inputMessage.errors.maxlength.requiredLength }} characters.</div>
+            </div>
+          </div>
+
+          <div class="alert alert-success" role="alert" id="success_message" *ngIf="form.valid">
+            <i class="glyphicon glyphicon-thumbs-up"></i> {{ formSuccessMessage }}
+          </div>
+
+          <div class="row">
+            <div class="" align="center">
+              <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
