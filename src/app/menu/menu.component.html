@@ -1,3 +1,9 @@
+<div id="header-main">
+  <div class="header-content">
+    <div class="header-content-left">100% Australian owned.</div>
+    <div class="header-content-right">Call Now <i class="glyphicon glyphicon-phone-alt"></i>&nbsp;<a href="tel: +61450750610">(+61)&nbsp;450-750-610</a></div>
+  </div>
+</div>  
 <div class="main-navbar">
   <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
@@ -8,15 +14,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills">
-          </a>
+        <a class="navbar-brand"><img src="../../assets/images/RockSteelLogo.png" alt="Dispute Bills"></a>
       </div>
       <div id="menu-bar" class="navbar-collapse collapse" [ngClass]="{ 'in': isIn }">
         <ul class="nav navbar-nav navbar-right">
-          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
-          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/about']">About Us</a></li>
-          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/portfolio']">Portfolio</a></li>
-          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/contact']">Contact Us</a></li>
+          <li class="active"><a href="./">Home</a></li>
+          <li><a (click)="navigateTo('#services')">Services</a></li>          
+          <li><a (click)="navigateTo('#portfolio')">Portfolio</a></li>
+          <li><a (click)="navigateTo('#services')">About Us</a></li>          
+          <li><a (click)="navigateTo('#contact-form')">Contact Us</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->

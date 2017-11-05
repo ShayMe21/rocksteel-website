@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div id="portfolio" class="row">
+    We thrive on having the projects delivered professionally and within schedule
+  </div>
+  <div style="text-align: center" class="row">
+    <div>
+      <button class="btn btn-sm btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+      <button class="btn btn-sm btn-info" [class.active]="filterBy=='residential'" (click)="filterBy='residential'">Residential</button>
+      <button class="btn btn-sm btn-info" [class.active]="filterBy=='commercial'" (click)="filterBy='commercial'">Commercial</button>
+      <button class="btn btn-sm btn-info" [class.active]="filterBy=='others'" (click)="filterBy='others'">Others</button>
+    </div>
+
+    <ul id="thumbnailsList">
+      <li *ngFor="let image of (visibleImages | filterGallery:filterBy)">
+        <img src="{{ image.url }}" alt="{{ image.title }}" class="tn">
+      </li>
+    </ul>
+  </div>
+</div>

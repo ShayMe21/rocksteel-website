@@ -1,5 +1,7 @@
+import { SendMailService } from './../send-mail.service';
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -10,13 +12,16 @@ export class ContactComponent implements OnInit, OnChanges {
 
   form: FormGroup;
   formSuccessMessage:string = "Thanks for contacting us, we will get back to you shortly.";
+  mailServices: SendMailService;
 
   /**
    * Default method when class is instantiated.
    * Should only be used for intialisation and declaration of class memebers.
    * Just to setup DI
    */
-  constructor() { }
+  constructor(private mailService: SendMailService) {
+    this.mailServices = mailService;
+   }
 
   /**
    * Lifecycle hook to indicate Ng2 is done creating the component and called  after the first ngOnChanges()
@@ -32,7 +37,7 @@ export class ContactComponent implements OnInit, OnChanges {
       ])),
       inputEmail: new FormControl("", Validators.compose([
         Validators.required,        
-        Validators.pattern('')
+        Validators.pattern('^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$')
       ])),
       inputMobile: new FormControl("", Validators.compose([
         Validators.required,
@@ -55,11 +60,7 @@ export class ContactComponent implements OnInit, OnChanges {
   }
 
   onSubmit = function (userMessage) {
-    console.log(userMessage);
+    this.mailServices.sendMail(userMessage);
   }
-
-  log(x) {console.log(x);}
-
-
 
 }

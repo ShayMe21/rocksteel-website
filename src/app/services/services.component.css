@@ -1,0 +1,20 @@
+#services {
+  text-align: center;
+  font-size: 1.2em;
+  background: rgba(247, 232, 100, 0.74);
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.serviceBlock {
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+}
+
+.serviceBlockHeader {
+  font-size: 1.4em;
+  font-weight: 800;
+
+}

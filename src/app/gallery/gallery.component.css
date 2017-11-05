@@ -1,0 +1,30 @@
+#portfolio {
+  text-align: center;
+  font-size: 1.2em;
+  background: rgba(132, 218, 30, 0.58);
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+#thumbnailsList {
+  list-style: none;
+  padding: 0;
+  width: 100vw;
+  margin: 20px auto;
+}
+
+#thumbnailsList>li {
+  display: inline;
+}
+
+#thumbnailsList>li>img {
+  width: 28%;
+}
+
+.tn {
+  margin: 6px;
+  border: 4px solid #eee;
+  box-shadow: #555 1px 1px 8px 1px;
+}

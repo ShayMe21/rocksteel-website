@@ -10,6 +10,7 @@
 .footer-note {
   color: #A8A8A8;
   padding-top: 50px;
+  font-size: 0.8em;
 }
 
 .footer-heading {
@@ -28,6 +29,7 @@
 
 .footer-content>li {
   padding-bottom: 5px;
+  margin-left: 5%;  
 }
 
 #footer-wrap li:before {
