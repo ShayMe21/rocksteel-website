@@ -19,6 +19,12 @@ const IMAGES = [
   { "id": 2, "title": "Second", "url": "../assets/images/2-Thumb.jpg", "category": "residential" },
   { "id": 3, "title": "Third", "url": "../assets/images/3-Thumb.jpg", "category": "commercial" },
   { "id": 4, "title": "Fourth", "url": "../assets/images/4-Thumb.jpg", "category": "commercial" },
-  { "id": 5, "title": "Fifth", "url": "../assets/images/5-Thumb.jpg", "category": "others" },
-  { "id": 5, "title": "Sixth", "url": "../assets/images/6-Thumb.jpg", "category": "others" }  
+  { "id": 5, "title": "Fifth", "url": "../assets/images/5-Thumb.jpg", "category": "residential" },
+  { "id": 5, "title": "Sixth", "url": "../assets/images/6-Thumb.jpg", "category": "residential" },
+  { "id": 5, "title": "Seventh", "url": "../assets/images/7-Thumb.jpg", "category": "commercial" },
+  { "id": 5, "title": "Eight", "url": "../assets/images/8-Thumb.jpg", "category": "commercial" },
+  { "id": 5, "title": "Ninth", "url": "../assets/images/9-Thumb.jpg", "category": "others" },
+  { "id": 5, "title": "Tenth", "url": "../assets/images/10-Thumb.jpg", "category": "others" },
+  { "id": 5, "title": "Eleventh", "url": "../assets/images/11-Thumb.jpg", "category": "others" }
+  //0415526726
 ]
