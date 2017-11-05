@@ -15,10 +15,10 @@ export class GalleryService {
 }
 
 const IMAGES = [
-  { "id": 1, "title": "First", "url": "../assets/images/1.JPG", "category": "residential" },
-  { "id": 2, "title": "Second", "url": "../assets/images/2.JPG", "category": "residential" },
-  { "id": 3, "title": "Third", "url": "../assets/images/3.jpg", "category": "commercial" },
-  { "id": 4, "title": "Fourth", "url": "../assets/images/4.jpg", "category": "commercial" },
-  { "id": 5, "title": "Fifth", "url": "../assets/images/5.jpg", "category": "others" },
-  { "id": 5, "title": "Sixth", "url": "../assets/images/6.jpg", "category": "others" }  
+  { "id": 1, "title": "First", "url": "../assets/images/1-Thumb.jpg", "category": "residential" },
+  { "id": 2, "title": "Second", "url": "../assets/images/2-Thumb.jpg", "category": "residential" },
+  { "id": 3, "title": "Third", "url": "../assets/images/3-Thumb.jpg", "category": "commercial" },
+  { "id": 4, "title": "Fourth", "url": "../assets/images/4-Thumb.jpg", "category": "commercial" },
+  { "id": 5, "title": "Fifth", "url": "../assets/images/5-Thumb.jpg", "category": "others" },
+  { "id": 5, "title": "Sixth", "url": "../assets/images/6-Thumb.jpg", "category": "others" }  
 ]
