@@ -11,6 +11,7 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormsModule } from '@a
 export class ContactComponent implements OnInit, OnChanges {
 
   form: FormGroup;
+  formSubmitted: boolean;
   formSuccessMessage:string = "Thanks for contacting us, we will get back to you shortly.";
   mailServices: SendMailService;
 

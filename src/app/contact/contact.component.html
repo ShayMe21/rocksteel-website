@@ -69,13 +69,13 @@
             </div>
           </div>
 
-          <div class="alert alert-success" role="alert" id="success_message" *ngIf="form.valid && submitted">
+          <div class="alert alert-success" role="alert" id="success_message" *ngIf="form.valid && formSubmitted">
             <i class="glyphicon glyphicon-thumbs-up"></i> {{ formSuccessMessage }}
           </div>
 
           <div class="row">
             <div class="" align="center">
-              <button type="submit" class="btn btn-primary" [disabled]="!form.valid" (click)="submitted=true">Submit</button>
+              <button type="submit" class="btn btn-primary" [disabled]="!form.valid" (click)="formSubmitted=true">Submit</button>
             </div>
           </div>
         </form>
