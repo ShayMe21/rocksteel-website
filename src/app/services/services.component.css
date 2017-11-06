@@ -1,20 +1,25 @@
-#services {
+#servicesTab {
   text-align: center;
   font-size: 1.2em;
   background: rgba(247, 232, 100, 0.74);
   width: 100vw;
   height: 50px;
   line-height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+}
+
+.services {
+  background-color: antiquewhite;
 }
 
 .serviceBlock {
-  background-color: antiquewhite;
   margin-bottom: 10px;
+  min-height: 45px;
+  line-height: 45px;  
 }
 
 .serviceBlockHeader {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 800;
-
+  text-align: left;
 }

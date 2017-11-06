@@ -14,7 +14,7 @@ export class SendMailService {
         'Content-Type' : 'application/json'
     });
 
-   return this.http.post("https://formspree.io/memshayan@gmail.com", 
+   return this.http.post("https://formspree.io/rock.s.group2020@gmail.com", 
         formValues,
         {
             'headers' : headers
