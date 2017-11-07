@@ -1,0 +1,20 @@
+#aboutTab {
+  background-color: mediumturquoise;
+  text-align: center;
+  font-size: 1.2em;
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 2px;
+}
+
+#aboutText {
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  min-height: 100px;
+  font-size: 1.2em;
+}
+
+#aboutUsPicture {
+  margin-bottom: 5px;
+}
