@@ -15,16 +15,15 @@ export class GalleryService {
 }
 
 const IMAGES = [
-  { "id": 1, "title": "First", "url": "../assets/images/1-Thumb.jpg", "category": "residential" },
-  { "id": 2, "title": "Second", "url": "../assets/images/2-Thumb.jpg", "category": "residential" },
-  { "id": 3, "title": "Third", "url": "../assets/images/3-Thumb.jpg", "category": "commercial" },
-  { "id": 4, "title": "Fourth", "url": "../assets/images/4-Thumb.jpg", "category": "commercial" },
-  { "id": 5, "title": "Fifth", "url": "../assets/images/5-Thumb.jpg", "category": "residential" },
-  { "id": 6, "title": "Sixth", "url": "../assets/images/6-Thumb.jpg", "category": "residential" },
-  { "id": 7, "title": "Seventh", "url": "../assets/images/7-Thumb.jpg", "category": "commercial" },
-  { "id": 8, "title": "Eight", "url": "../assets/images/8-Thumb.jpg", "category": "commercial" },
-  { "id": 9, "title": "Ninth", "url": "../assets/images/9-Thumb.jpg", "category": "others" },
-  { "id": 10, "title": "Tenth", "url": "../assets/images/10-Thumb.jpg", "category": "others" },
-  { "id": 11, "title": "Eleventh", "url": "../assets/images/11-Thumb.jpg", "category": "others" }
-  //0415526726
+  { "id": 1, "title": "First", "url": "../assets/images/RockSteelGroup_1_Small.jpg", "category": "residential" },
+  { "id": 2, "title": "Second", "url": "../assets/images/RockSteelGroup_2_Small.jpg", "category": "residential" },
+  { "id": 3, "title": "Third", "url": "../assets/images/RockSteelGroup_3_Small.jpg", "category": "commercial" },
+  { "id": 4, "title": "Fourth", "url": "../assets/images/RockSteelGroup_4_Small.jpg", "category": "commercial" },
+  { "id": 5, "title": "Fifth", "url": "../assets/images/RockSteelGroup_5_Small.jpg", "category": "residential" },
+  { "id": 6, "title": "Sixth", "url": "../assets/images/RockSteelGroup_6_Small.jpg", "category": "residential" },
+  { "id": 7, "title": "Seventh", "url": "../assets/images/RockSteelGroup_7_Small.jpg", "category": "commercial" },
+  { "id": 8, "title": "Eight", "url": "../assets/images/RockSteelGroup_8_Small.jpg", "category": "commercial" },
+  { "id": 9, "title": "Ninth", "url": "../assets/images/RockSteelGroup_9_Small.jpg", "category": "others" },
+  { "id": 10, "title": "Tenth", "url": "../assets/images/RockSteelGroup_10_Small.jpg", "category": "others" },
+  { "id": 11, "title": "Eleventh", "url": "../assets/images/RockSteelGroup_11_Small.jpg", "category": "others" }
 ]
