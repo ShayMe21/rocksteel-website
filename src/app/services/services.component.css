@@ -1,18 +1,16 @@
 #servicesTab {
-  text-align: center;
-  font-size: 1.2em;
-  background: rgba(247, 232, 100, 0.74);
-  width: 100vw;
-  height: 50px;
-  line-height: 50px;
-  margin-bottom: 2px;
+  text-align: left;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #9e9e9e;
 }
 
 .services {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
+  padding: 1em;
 }
 
 .serviceBlock {
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 10px;
   min-height: 45px;
   line-height: 45px;  
@@ -22,4 +20,9 @@
   font-size: 1.3em;
   font-weight: 800;
   text-align: left;
+}
+
+.glyphicon-ok:before{
+  padding: 0.5em;
+  color: rgb(32, 209, 32);
 }

@@ -5,27 +5,40 @@
 #header-main {
   background-color: rgba(45, 45, 51, 0.86);
   position: relative;
-  width: 100%;
-  min-height: 40px;
-  /* line-height: 40px; */
-  vertical-align: middle;
 }
 
 .header-content {
   color: #FCFCFC;
-  /* font-family: 'Open Sans', sans-serif; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  letter-spacing: 2px;
+  padding: 0.5em;
 }
 
-.header-content-left {
-  float: left;
-  position: relative;
-  margin-left: 2%;
+.header-content-item,
+.header-content-aussie {
+  text-align: center;
 }
 
-.header-content-right {
-  float: right;
-  position: relative;
-  margin-right: 2%;
+
+/* Tablet and Desktop */
+
+@media all and (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    letter-spacing: 0;
+    padding: 1em;
+  }
+  .header-content-item {
+    flex: 1 0 25%;
+    text-align: right;
+    padding-right: 1em;
+  }
+  .header-content-aussie {
+    flex: 1 0 50%;
+    text-align: left;
+  }
 }
 
 a {
@@ -36,11 +49,32 @@ a:visited {
   color: #478F58;
 }
 
+
 /**********************************
 Responsive navbar-brand image CSS
 - Remove navbar-brand padding for firefox bug workaround
 - add 100% height and width auto ... similar to how bootstrap img-responsive class works
 ***********************************/
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar-default {
+  background-color: #FCA311;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: #FCA311;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: rgba(229, 229, 229, 0);
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #14213D;
+}
 
 .navbar-brand {
   padding: 0px;
@@ -52,11 +86,18 @@ Responsive navbar-brand image CSS
   width: auto;
 }
 
+#menu-bar ul>li {
+  line-height: 80px; /* = height of #menu */
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 #menu-bar ul>li:hover {
-  border-bottom: 1px solid red;
+  color: #14213D;
   font-weight: bold;
-  font-size: 1.4em;
   cursor: pointer;
+  transition: all 250ms linear;
+  box-shadow: inset 0 -4px 2px -2px rgba(0,0,0,0.75);
 }
 
 #menu-bar ul>li.active {
@@ -67,7 +108,6 @@ Responsive navbar-brand image CSS
   .navbar-brand {
     padding: 10px;
   }
-
   .header-content {
     font-size: 0.8em;
   }
@@ -75,8 +115,8 @@ Responsive navbar-brand image CSS
 
 
 /* MAIN NAVBAR
-
 line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
 .main-navbar .navbar-brand {
   height: 80px;
 }

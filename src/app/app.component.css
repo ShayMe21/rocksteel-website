@@ -1,13 +1,5 @@
-h1 {
-  color: #369;
-}
-
-a {
-  color: #6FE98D;
-}
-
-a:visited {
-  color: #478F58;
+#main-app {
+  background-color: #E5E5E5;
 }
 
 

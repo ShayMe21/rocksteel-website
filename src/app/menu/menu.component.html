@@ -1,16 +1,15 @@
 <div id="header-main">
   <div class="header-content">
-    <div class="header-content-left">100% Australian owned.</div>
 
-    <div class="header-content-right">
+    <div class="header-content-item header-content-aussie">100% Australian owned.</div>
+
+    <div class="header-content-item">
       <i class="glyphicon glyphicon-phone-alt"></i>&nbsp;
-      <a href="tel: +61450750610">(+61)&nbsp;450-750-610</a>
+      <a href="tel: +61450750610">0450-750-610</a>
+      <span style="color: grey">|</span>
+      <a href="tel: +61415526726">0415-526-726</a>
     </div>
 
-    <div class="header-content-right" style="clear: both;">
-      <i class="glyphicon glyphicon-phone-alt"></i>&nbsp;
-      <a href="tel: +61415526726">(+61)&nbsp;415-526-726</a>
-    </div>
   </div>
 </div>
 <div class="main-navbar">
@@ -23,26 +22,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">
-          <img src="../../assets/images/RockSteelLogo.png" alt="Dispute Bills">
+        <a class="navbar-brand" href="http://www.rocksteelgroup.com.au">
+          <img src="../../assets/images/RockSteelLogo.png" border="0" alt="Rock Steel Group - Steel Fixing">
         </a>
       </div>
       <div id="menu-bar" class="navbar-collapse collapse" [ngClass]="{ 'in': isIn }">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active">
-            <a href="./">Home</a>
-          </li>
           <li>
-            <a (click)="navigateTo('#aboutus')">About Us</a>
-          </li>
-          <li>
-            <a (click)="navigateTo('#portfolio')">Portfolio</a>
-          </li>
-          <li>
-            <a (click)="navigateTo('#services')">Services</a>
-          </li>
-          <li>
-            <a (click)="navigateTo('#contact-form')">Contact Us</a>
+            <a (click)="navigateTo('#contact-form')">CONTACT US</a>
           </li>
         </ul>
       </div>
