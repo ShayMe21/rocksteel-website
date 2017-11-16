@@ -1,26 +1,18 @@
 #portfolio {
   text-align: left;
   margin-bottom: 15px;
-  border-bottom: 1px solid #9e9e9e;  
+  border-bottom: 1px solid #9e9e9e;
 }
 
-#thumbnailsList {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
-}
-
-#thumbnailsList>li {
-  display: inline;
-}
-
-#thumbnailsList>li>img {
-  width: 28%;
+#imageGallery {
+  width: 100vw;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .tn {
   margin: 6px;
-  border: 4px solid #eee;
+  border: 1px solid #eee;
   box-shadow: #555 1px 1px 8px 1px;
 }
 
@@ -33,5 +25,54 @@
   outline-offset: -2px;
 } 
 
-.btn:focus {
+.more {
+  position: absolute;
+  /* margin: 0px; */
+  /* top: 0px; */
+  margin-top: 2px;
+  /* word-break: break-word; */
+  background: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  width: 50px;
+  padding-left: 0px;
+  padding-top: 2px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.list-img {
+  height: 50px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+#gallerySeparatorDiv {
+  height: 200px;
+}
+/* Tablet and Desktop */
+
+@media all and (min-width: 768px) {
+  .list-img {
+    height: 80px;;
+  }
+
+  #gallerySeparatorDiv {
+    height: 300px;
+  }
+
+  #imageGallery {
+    width: 80vw;
+  }
+
+}
+
+.float-left {
+  float: left;
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.float-left a:hover {
+  color: red;
+  cursor: pointer;
 }

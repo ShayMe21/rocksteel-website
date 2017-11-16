@@ -12,8 +12,9 @@ export class ContactComponent implements OnInit, OnChanges {
 
   form: FormGroup;
   formSubmitted: boolean;
-  formSuccessMessage:string = "Thanks for contacting us, we will get back to you shortly.";
+  formSuccessMessage: string = "Thanks for contacting us, we will get back to you shortly.";
   mailServices: SendMailService;
+  subject: string = "Thanks for your enquiry: Rock Steel Group";
 
   /**
    * Default method when class is instantiated.
@@ -22,7 +23,7 @@ export class ContactComponent implements OnInit, OnChanges {
    */
   constructor(private mailService: SendMailService) {
     this.mailServices = mailService;
-   }
+  }
 
   /**
    * Lifecycle hook to indicate Ng2 is done creating the component and called  after the first ngOnChanges()
@@ -36,8 +37,8 @@ export class ContactComponent implements OnInit, OnChanges {
         Validators.maxLength(30),
         Validators.pattern('[\\w\\-\\s\\/]+')
       ])),
-      inputEmail: new FormControl("", Validators.compose([
-        Validators.required,        
+      _replyto: new FormControl("", Validators.compose([
+        Validators.required,
         Validators.pattern('^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$')
       ])),
       inputMobile: new FormControl("", Validators.compose([
@@ -56,8 +57,8 @@ export class ContactComponent implements OnInit, OnChanges {
    * Lifecycle hook that is called when any data-bound property of a directive changes.
    * @param changes 
    */
-  ngOnChanges(changes: SimpleChanges){
-    
+  ngOnChanges(changes: SimpleChanges) {
+
   }
 
   onSubmit = function (userMessage) {

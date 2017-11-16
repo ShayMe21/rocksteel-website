@@ -8,15 +8,16 @@ import { CollapseModule, AlertModule } from 'ngx-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-//import { CONST_ROUTING } from './app.routing';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component'; 
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { GalleryService } from './gallery.service';
 import { FilterGalleryPipe } from './filter-gallery.pipe';
+import '../../node_modules/hammerjs';
+import '../../node_modules/mousetrap';
+import { ModalGalleryModule } from '../../node_modules/angular-modal-gallery';
 
 @NgModule({
   declarations: [
@@ -36,11 +37,11 @@ import { FilterGalleryPipe } from './filter-gallery.pipe';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpModule,
-    //CONST_ROUTING,
     CollapseModule,
-    [AlertModule.forRoot()]
+    [AlertModule.forRoot()],
+    [ModalGalleryModule.forRoot()]
   ],
-  providers: [GalleryService, FilterGalleryPipe, SendMailService],
+  providers: [FilterGalleryPipe, SendMailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,31 @@
 <div id="portfolio">
   <h2>Our work</h2>
 </div>
-<div style="text-align: center">
+<!-- <div style="text-align: center">
   <div>
     <button class="btn btn-sm btn-filter" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
     <button class="btn btn-sm btn-filter" [class.active]="filterBy=='residential'" (click)="filterBy='residential'">Residential</button>
     <button class="btn btn-sm btn-filter" [class.active]="filterBy=='commercial'" (click)="filterBy='commercial'">Commercial</button>
     <button class="btn btn-sm btn-filter" [class.active]="filterBy=='others'" (click)="filterBy='others'">Others</button>
   </div>
+</div> -->
 
-  <ul id="thumbnailsList" class="text-center">
-    <li *ngFor="let image of (visibleImages | filterGallery:filterBy)">
-      <img src="{{ image.url }}" alt="{{ image.title }}" class="tn" title="Rock Steel Group">
-    </li>
-  </ul>
+<div id="imageGallery">
+  <div *ngFor="let img of images | async; let i = index">
+    <div class="float-left" *ngIf="i <= 13">
+      <a class="more" *ngIf="i==13" (click)="openImageModalObservable(img)"> +{{(images | async)?.length - 3}} more </a>
+      <img *ngIf="img.thumb" class="list-img tn" src="{{img.thumb}}" (click)="openImageModalObservable(img)" alt='{{img.description}}'
+      />
+      <img *ngIf="!img.thumb" class="list-img" src="{{img.img}}" (click)="openImageModalObservable(img)" alt='{{img.description}}'
+      />
+    </div>
+  </div>
 </div>
+
+<div *ngIf="openModalWindowObservable">
+  <modal-gallery [modalImages]="images" [buttonsConfig]="{download: false, extUrl: false, close: true}" [downloadable]="true"
+    [enableCloseOutside]="true" [imagePointer]="imagePointerObservable" (close)="onCloseImageModal($event)">
+  </modal-gallery>
+</div>
+
+<div id="gallerySeparatorDiv"></div>
