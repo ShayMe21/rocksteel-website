@@ -14,7 +14,7 @@
   <div *ngFor="let img of images | async; let i = index">
     <div class="float-left" *ngIf="i <= 13">
       <a class="more" *ngIf="i==13" (click)="openImageModalObservable(img)"> +{{(images | async)?.length - 3}} more </a>
-      <img *ngIf="img.thumb" class="list-img tn" src="{{img.thumb}}" (click)="openImageModalObservable(img)" alt='{{img.description}}'
+      <img *ngIf="img.thumb" class="list-img" src="{{img.thumb}}" (click)="openImageModalObservable(img)" alt='{{img.description}}'
       />
       <img *ngIf="!img.thumb" class="list-img" src="{{img.img}}" (click)="openImageModalObservable(img)" alt='{{img.description}}'
       />
