@@ -12,9 +12,9 @@ export class ContactComponent implements OnInit, OnChanges {
 
   form: FormGroup;
   formSubmitted: boolean;
-  formSuccessMessage: string = "Thanks for contacting us, we will get back to you shortly.";
+  formSuccessMessage = 'Thanks for contacting us, we will get back to you shortly.';
   mailServices: SendMailService;
-  subject: string = "Thanks for your enquiry: Rock Steel Group";
+  subject = 'Thanks for your enquiry re: Rock Steel Group';
 
   /**
    * Default method when class is instantiated.
@@ -31,21 +31,21 @@ export class ContactComponent implements OnInit, OnChanges {
    */
   ngOnInit() {
     this.form = new FormGroup({
-      inputName: new FormControl("", Validators.compose([
+      inputName: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30),
         Validators.pattern('[\\w\\-\\s\\/]+')
       ])),
-      _replyto: new FormControl("", Validators.compose([
+      _replyto: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$')
       ])),
-      inputMobile: new FormControl("", Validators.compose([
+      inputMobile: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('[\\d\\-]+')
       ])),
-      inputMessage: new FormControl("", Validators.compose([
+      inputMessage: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(10),
         Validators.maxLength(200)
@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit, OnChanges {
 
   /**
    * Lifecycle hook that is called when any data-bound property of a directive changes.
-   * @param changes 
+   * @param changes
    */
   ngOnChanges(changes: SimpleChanges) {
 
@@ -63,6 +63,6 @@ export class ContactComponent implements OnInit, OnChanges {
 
   onSubmit = function (userMessage) {
     this.mailServices.sendMail(userMessage);
-  }
+  };
 
 }

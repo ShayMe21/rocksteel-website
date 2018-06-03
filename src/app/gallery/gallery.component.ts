@@ -14,26 +14,13 @@ import 'rxjs/add/operator/delay';
 })
 export class GalleryComponent implements OnChanges, OnInit, OnDestroy {
   visibleImages: any[] = [];
-  @Input() filterBy?: string = "all";
+  @Input() filterBy? = 'all';
 
   constructor() {  }
-
-  ngOnChanges() {     
-    this.visibleImages = this.getImages();
-  }
-
-  getImages() {
-    return this.visibleImages = this.imagesArray.slice(0);
-  }
-
-  // Curtesy of https://ks89.github.io/angular-modal-gallery.github.io/demo
-
-  openModalWindow: boolean = false;
-  imagePointer: number = 0;
-
-  openModalWindowObservable: boolean = false;
-  imagePointerObservable: number = 0;
-
+  openModalWindow = false;
+  imagePointer = 0;
+  openModalWindowObservable = false;
+  imagePointerObservable = 0;
   /**
    * @param [imageUrl, ThumbUrl, Alt, Url]
    */
@@ -54,10 +41,10 @@ export class GalleryComponent implements OnChanges, OnInit, OnDestroy {
     ),
     new Image(
       '../../assets/images/RockSteelGroup_3.jpg',
-      '../../assets/images/RockSteelGroup_3_Small.jpg',      
+      '../../assets/images/RockSteelGroup_3_Small.jpg',
       'Rock Steel Group',
       null,
-      'residential'    
+      'residential'
     ),
     new Image(
       '../../assets/images/RockSteelGroup_4.jpg',
@@ -144,6 +131,17 @@ export class GalleryComponent implements OnChanges, OnInit, OnDestroy {
   private subscription: Subscription;
   private imagesArraySubscription: Subscription;
 
+  ngOnChanges() {
+    this.visibleImages = this.getImages();
+  }
+
+  getImages() {
+    return this.visibleImages = this.imagesArray.slice(0);
+  }
+
+  // Curtesy of https://ks89.github.io/angular-modal-gallery.github.io/demo
+
+
   ngOnInit() {
     this.imagesArraySubscription = Observable.of(null).delay(500).subscribe(() => {
       this.imagesArraySubscribed = this.imagesArray;
@@ -199,7 +197,7 @@ export class GalleryComponent implements OnChanges, OnInit, OnDestroy {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
-    if(this.imagesArraySubscription) {
+    if (this.imagesArraySubscription) {
       this.imagesArraySubscription.unsubscribe();
     }
   }

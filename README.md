@@ -26,3 +26,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Production Deployment
+`ng build --prod --base-href=/my/app/` To create production build files.
+
+`aws configure` with aws-cli first.
+`aws s3 sync --acl public-read --sse --delete /path/to/static/site/ s3://rocksteelgroup.com.au`
