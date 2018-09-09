@@ -7,7 +7,7 @@ import { Component, OnInit, Directive, HostListener, HostBinding } from '@angula
 })
 export class MenuComponent implements OnInit {
 
-  isIn: boolean = false;   // store state of bootstrap navbar
+  isIn = false;   // store state of bootstrap navbar
   constructor() { }
 
   ngOnInit() {}
@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
    * Toggle state of bootstrap navbar to expand/collapse
    */
   toggleState() {
-    let bool = this.isIn;
+    const bool = this.isIn;
     this.isIn = bool === false ? true : false;
   }
 
@@ -29,9 +29,5 @@ export class MenuComponent implements OnInit {
     setTimeout(() => {
       document.querySelector(location).parentElement.scrollIntoView();
     });
-
-    
   }
-
-
 }

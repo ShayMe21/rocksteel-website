@@ -26,78 +26,106 @@ export class GalleryComponent implements OnChanges, OnInit, OnDestroy {
    */
   imagesArray: Array<Image> = [
     new Image(
-      '../../assets/images/RockSteelGroup_1.jpg',
-      '../../assets/images/RockSteelGroup_1_Small.jpg',
+      'assets/images/RockSteelGroup_1.jpg',
+      'assets/images/RockSteelGroup_1_Small.jpg',
       'Rock Steel Group',
       null,
       'residential'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_2.jpg',
-      '../../assets/images/RockSteelGroup_2_Small.jpg',
+      'assets/images/RockSteelGroup_2.jpg',
+      'assets/images/RockSteelGroup_2_Small.jpg',
       'Rock Steel Group',
       null,
       'residential'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_3.jpg',
-      '../../assets/images/RockSteelGroup_3_Small.jpg',
+      'assets/images/RockSteelGroup_3.jpg',
+      'assets/images/RockSteelGroup_3_Small.jpg',
       'Rock Steel Group',
       null,
       'residential'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_4.jpg',
-      '../../assets/images/RockSteelGroup_4_Small.jpg',
+      'assets/images/RockSteelGroup_4.jpg',
+      'assets/images/RockSteelGroup_4_Small.jpg',
       'Rock Steel Group',
       null,
       'residential'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_5.jpg',
-      '../../assets/images/RockSteelGroup_5_Small.jpg',
+      'assets/images/RockSteelGroup_5.jpg',
+      'assets/images/RockSteelGroup_5_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_6.jpg',
-      '../../assets/images/RockSteelGroup_6_Small.jpg',
+      'assets/images/RockSteelGroup_6.jpg',
+      'assets/images/RockSteelGroup_6_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_7.jpg',
-      '../../assets/images/RockSteelGroup_7_Small.jpg',
+      'assets/images/RockSteelGroup_7.jpg',
+      'assets/images/RockSteelGroup_7_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_8.jpg',
-      '../../assets/images/RockSteelGroup_8_Small.jpg',
+      'assets/images/RockSteelGroup_8.jpg',
+      'assets/images/RockSteelGroup_8_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_9.jpg',
-      '../../assets/images/RockSteelGroup_9_Small.jpg',
+      'assets/images/RockSteelGroup_9.jpg',
+      'assets/images/RockSteelGroup_9_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_10.jpg',
-      '../../assets/images/RockSteelGroup_10_Small.jpg',
+      'assets/images/RockSteelGroup_10.jpg',
+      'assets/images/RockSteelGroup_10_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'
     ),
     new Image(
-      '../../assets/images/RockSteelGroup_11.jpg',
-      '../../assets/images/RockSteelGroup_11_Small.jpg',
+      'assets/images/RockSteelGroup_11.jpg',
+      'assets/images/RockSteelGroup_11_Small.jpg',
+      'Rock Steel Group',
+      null,
+      'commercial'
+    ),
+    new Image(
+      'assets/images/RockSteelGroup_12.jpg',
+      'assets/images/RockSteelGroup_12_Small.jpg',
+      'Rock Steel Group',
+      null,
+      'commercial'
+    ),
+    new Image(
+      'assets/images/RockSteelGroup_13.jpg',
+      'assets/images/RockSteelGroup_13_Small.jpg',
+      'Rock Steel Group',
+      null,
+      'commercial'
+    ),
+    new Image(
+      'assets/images/RockSteelGroup_14.jpg',
+      'assets/images/RockSteelGroup_14_Small.jpg',
+      'Rock Steel Group',
+      null,
+      'commercial'
+    ),
+    new Image(
+      'assets/images/RockSteelGroup_15.jpg',
+      'assets/images/RockSteelGroup_15_Small.jpg',
       'Rock Steel Group',
       null,
       'commercial'

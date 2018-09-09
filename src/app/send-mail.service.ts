@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http,Headers,Response} from '@angular/http';
+import {Http, Headers} from '@angular/http';
 
 /**
  * The http client service to send form input submissions to formspree email API.
@@ -9,12 +9,12 @@ export class SendMailService {
 
   constructor(private http: Http) { }
 
-  public sendMail(formValues){
+  public sendMail(formValues) {
     const headers = new Headers({
         'Content-Type' : 'application/json'
     });
 
-   return this.http.post("https://formspree.io/enquiries@rocksteelgroup.com.au", 
+   return this.http.post('https://formspree.io/enquiries@rocksteelgroup.com.au',
         formValues,
         {
             'headers' : headers
